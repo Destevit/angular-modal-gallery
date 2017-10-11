@@ -357,10 +357,10 @@ export class AngularModalGalleryComponent implements OnInit, OnDestroy, OnChange
    */
   swipe(index: number, action = this.SWIPE_ACTION.RIGHT) {
     switch (action) {
-      case this.SWIPE_ACTION.RIGHT:
+      case this.SWIPE_ACTION.LEFT:
         this.nextImage(Action.SWIPE);
         break;
-      case this.SWIPE_ACTION.LEFT:
+      case this.SWIPE_ACTION.RIGHT:
         this.prevImage(Action.SWIPE);
         break;
       // case this.SWIPE_ACTION.UP:
