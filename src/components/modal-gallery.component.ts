@@ -340,6 +340,8 @@ export class AngularModalGalleryComponent implements OnInit, OnDestroy, OnChange
    */
   getDescriptionToDisplay() {
     if (this.description && this.description.customFullDescription) {
+      if(this.currentImage.description)
+        return this.description.customFullDescription.replace('{@}', this.currentImage.description);
       return this.description.customFullDescription;
     }
     // If the current image hasn't a description,
